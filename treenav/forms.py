@@ -58,7 +58,7 @@ class MenuItemForm(MPTTAdminForm):
 
 class GenericInlineMenuItemForm(forms.ModelForm):
     parent = TreeNodeChoiceField(
-        queryset=MenuItem.objects.all()
+        queryset=MenuItem.tree.all()
     )
     class Meta:
         model = MenuItem
